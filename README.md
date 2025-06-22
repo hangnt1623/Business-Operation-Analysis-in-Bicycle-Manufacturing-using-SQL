@@ -1,5 +1,7 @@
 # Bicycle-Manufacturer
 Use SQL for exploring Bicycle Manufacturer Dataset
+![image](https://github.com/user-attachments/assets/589db91a-6188-4d1f-899b-66255b1e3fca)
+
 
 - Author: Nguyen Thuy Hang
 - Date: 2025-06-22
