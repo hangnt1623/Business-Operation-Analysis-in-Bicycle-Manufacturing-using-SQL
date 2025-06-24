@@ -16,28 +16,25 @@ Use SQL for exploring Bicycle Manufacturer Dataset
 
 ## 📌 Background & Overview  
 ### Background
-Adventure Works là một công ty nổi tiếng chuyên sản xuất và bán các loại xe đạp, phụ tùng và phụ kiện.
+Adventure Works is a well-known company that manufactures and sells bicycles, parts and accessories.
 
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
-This project explores a Bicycle-Manufacturer dataset using SQL on Google BigQuery. It focuses on examining the data through basic queries to understand its structure and contents. The data originates from the Google Analytics public dataset.
+This project is to analyze product, customer, region, and inventory performance across time to uncover growth opportunities, improve operational efficiency, and support data-driven decisions in sales, marketing, and supply chain planning.
 
-The key business questions related to sales performance, stock trends, customer retention, and discount impact. It includes analysis of subcategory growth, territory rankings, stock-to-sales ratios, and pending orders. All insights are derived using SQL on the Bicycle-Manufacturer dataset.
-
-
-
+The main business question this project aims to answer is: "How can Adventure Works optimize product sales, customer retention, regional performance, and inventory management to drive growth and improve operational efficiency?"
 
 
 ### 👤 Who is this project for?  
-This project is for *business analysts, operations managers, sales teams, and data analysts* who need actionable insights into product performance, customer retention, inventory levels, and sales trends to support data-driven decisions in the manufacturing business.
+This project is designed for Adventure Works’ business leaders and decision-makers, including sales managers, marketing teams, supply chain planners, and operations executives who need actionable insights to boost sales, improve customer loyalty, optimize inventory, and expand market presence effectively.
 
 ---
 
 ## 📂 Dataset Description & Data Structure  
 
 ### 📌 Data Source  
-- Source: the dataset is obtained from Google Analytics public dataset 
+- Source: The dataset originates from the Google Analytics public dataset and represents information from AdventureWorks company.
 
 ### 📊 Data Structure & Relationships  
 
@@ -56,7 +53,6 @@ This project use 6 tables from this dataset:
 1️⃣ Understand dataset 
 
 2️⃣ Explore specific dataset through some requirements
-
 
 ---
 
