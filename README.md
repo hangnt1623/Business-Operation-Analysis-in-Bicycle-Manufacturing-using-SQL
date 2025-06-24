@@ -208,8 +208,8 @@ group by 1,2;
 *Result*
 | f0_ | Name | total_cost |
 | --- | --- | --- |
-| 2012 | Helmets | 14.971.669 |
-| 2013 | Helmets | 54.321.975 |
+| 2012 | Helmets | 149.71669 |
+| 2013 | Helmets | 543.21975 |
 
 
 **QUERY 5 -- Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)**
