@@ -134,6 +134,16 @@ order by dk ;
 | Socks | 2724 | 523 | 4.21 | 2 |
 | Road Frames | 5564 | 1137 | 3.89 | 3 |
 
+*Findings & Recommendations*
+- Findings
+  + Mountain Frames shows the strongest growth, increasing over 5 times compared to the previous year, indicating a surge in demand
+  + Socks and Road Frames also have very high growth, over 4 times and nearly 4 times respectively
+  + -> These categories are the main drivers of Adventure Works’ sales growth.
+- Recommendations
+  + Prioritize production and inventory for these categories
+  + Focus marketing and promotions on them
+  + Explore product expansion or innovation to sustain growth.
+
 
 **QUERY 3 - Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number**
 
@@ -182,6 +192,15 @@ where rk in (1,2,3)   --rk <=3
 | 2014 | 6 | 9711 | 2 |
 | 2014 | 1 | 8823 | 3 |
 
+*Findings & Recommendations*
+- Findings
+  + TerritoryID 4 consistently ranks #1 in order volume from 2011 to 2014, with strong growth
+  + TerritoryID 6 and 1 reliably hold 2nd and 3rd positions each year
+  + These three territories dominate Adventure Works’ order volume
+- Recommendations
+  + Prioritize investment to maintain and expand TerritoryID 4’s market
+  + Strengthen development efforts in TerritoryID 6 and 1 to capture further growth
+  + Analyze success factors in these regions to replicate in other territories.
 
 **QUERY 4 - Calculate Total Discount Cost belongs to Seasonal Discount for each SubCategory**
 
@@ -211,6 +230,12 @@ group by 1,2;
 | 2012 | Helmets | 149.71669 |
 | 2013 | Helmets | 543.21975 |
 
+*Findings & Recommendations*
+- Findings: Seasonal discount costs for Helmets surged over 3.5 times from 2012 ($150) to 2013 ($540) -> This indicates significant expansion of seasonal promotions or increased need to boost demand for this category.
+- Recommendations
+  + Monitor seasonal discount expenses closely to avoid excessive margin erosion
+  + Evaluate the effectiveness of current discount campaigns on Helmets and consider adjusting promotion levels or channels
+  + Analyze sales data alongside discount costs to ensure increased spending translates into proportional revenue growth and optimize marketing budget
 
 **QUERY 5 -- Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)**
 
@@ -295,7 +320,13 @@ order by 1,2;
 | 6 | M - 1 | 10 |
 | 7 | M - 0 | 148 |
 
-
+*Findings & Recommendations*
+- Findings
+  + Strong initial orders but steep drop in retention after month 0
+  + Minor rebounds in month 3 for some cohorts
+- Recommendations
+  + Enhance early post-purchase engagement and loyalty efforts
+  + Target incentives to improve repurchase in months 1–2
 
 **QUERY 6 - Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal**
 
@@ -1061,6 +1092,18 @@ order by 1 asc, 2 desc;
 | Top Tube | 7 | 2011 | 1583 | 640 | 147.3 |
 | Top Tube | 6 | 2011 | 640 |  | 0 |
 
+*Findings & Recommendations*
+- Findings
+  + Significant monthly stock fluctuations cause overstock and stockouts (e.g., BB Ball Bearing, Blade)
+  + Overproduction leads to high inventory costs
+  + Inconsistent inventory management and poor seasonal forecasting create inefficiencies
+- Recommendations 
+  + Forecast demand monthly using recent sales data to adjust inventory proactively
+  + Maintain safety stock for high-variability products to prevent stockouts
+  + Monitor monthly stock changes regularly and investigate unusual spikes or drops
+  + Collaborate with suppliers for flexible, responsive replenishment
+  + Plan production around seasonal demand patterns to balance stock levels
+
 
 **QUERY 7 - -"Calculate Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal 
 mom yoy**
@@ -1443,6 +1486,17 @@ order by 1 desc, 7 desc;
 | 5 | 2011 | 733 | ML Road Frame - Red, 52 | 4 |  | 0 |
 | 5 | 2011 | 772 | Mountain-100 Silver, 42 | 5 |  | 0 |
 
+*Findings & Recommendations*
+- Findings 
+  + High stock/sales ratios (>5) for many SKUs = slow-moving inventory, cash flow risk
+  + Missing stock data for accessories (helmets, socks, jerseys) = inventory blind spots
+  + Stock/sales ratio drops late in year = effective clearance or seasonal sales spike
+  + Best-selling SKUs maintain balanced stock-to-sales (~1) = efficient inventory
+- Recommendations
+  + Reduce or clear high-ratio SKUs
+  + Fix stock tracking for accessories
+  + Prioritize inventory for fast-moving SKUs
+  + Monitor ratios monthly for early issue detection
 
 
 **QUERY 8 - Number of orders and value at Pending status in 2014**
@@ -1465,6 +1519,22 @@ GROUP BY yr,Status
 | yr | Status | order_cnt | value |
 | --- | --- | --- | --- |
 | 2014 | 1 | 224 | 3,873,579.0123 |
+
+*Findings & Recommendations*
+- Findings: In 2014, there were 224 pending orders totaling approximately $3.87 million in value -> This indicates a significant volume and monetary value stuck in the pending status, potentially delaying fulfillment and revenue recognition.
+- Recommendations
+  + Investigate causes of pending orders to identify and remove process bottlenecks
+  + Streamline order processing workflows to reduce pending durations
+  + Monitor pending order metrics regularly to prevent backlog buildup
+  + Prioritize clearance of high-value pending orders to improve cash flow and customer satisfaction
+
+### 💡Conclusion & Key Insights
+
+
+
+
+
+
 
 
 
