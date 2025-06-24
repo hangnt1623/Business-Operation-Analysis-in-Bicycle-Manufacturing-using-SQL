@@ -15,6 +15,8 @@ Use SQL for exploring Bicycle Manufacturer Dataset
 ---
 
 ## 📌 Background & Overview  
+### Background
+Adventure Works là một công ty nổi tiếng chuyên sản xuất và bán các loại xe đạp, phụ tùng và phụ kiện.
 
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
@@ -60,7 +62,10 @@ This project use 6 tables from this dataset:
 
 ## 🔎 Exploring dataset & insights  
 
-**QUERY 1 - Calc Quantity of items, Sales value & Order quantity by each Subcategory in L12M**
+**QUERY 1 - Calculate Quantity of items, Sales value & Order quantity by each Subcategory in L12M**
+
+*Purpose*: Evaluate sales performance by Subcategory (volume, revenue, orders) over the last 12 months to identify best-selling product groups and guide inventory, marketing, and sales strategy
+
 ```sql
 SELECT
         FORMAT_DATE('%Y-%m', DATE_SUB(date(detail.ModifiedDate), INTERVAL 12 month)) AS month_year
@@ -80,9 +85,13 @@ WHERE DATE(detail.ModifiedDate) >= (
 GROUP BY month_year,detail.ProductID,product.ProductSubcategoryID,subcate.Name
 ORDER BY month_year, subcate.Name
 ```
+*Result*
 
 
-**QUERY 2 - Calc % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal**
+**QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal**
+
+*Purpose*: Identify top 3 fastest-growing product categories to prioritize investment
+
 ```sql
 with 
 sale_info as (
@@ -122,6 +131,7 @@ from rk_qty_diff
 where dk <=3
 order by dk ;
 ```
+*Result*
 | Name | qty_item | prv_qty | qty_diff | dk |
 | --- | --- | --- | --- | --- |
 | Mountain Frames | 3168 | 510 | 5.21 | 1 |
@@ -130,6 +140,9 @@ order by dk ;
 
 
 **QUERY 3 - Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number**
+
+*Purpose*: Identify high-performing regions each year based on order volume to prioritize investment and market expansion in strong territories
+
 ```sql
 with 
 sale_info as (
@@ -157,6 +170,7 @@ from sale_rank
 where rk in (1,2,3)   --rk <=3
 ;
 ```
+*Result*
 | yr | TerritoryID | order_cnt | rk |
 | --- | --- | --- | --- |
 | 2012 | 4 | 17553 | 1 |
@@ -173,7 +187,10 @@ where rk in (1,2,3)   --rk <=3
 | 2014 | 1 | 8823 | 3 |
 
 
-**QUERY 4 - Calc Total Discount Cost belongs to Seasonal Discount for each SubCategory**
+**QUERY 4 - Calculate Total Discount Cost belongs to Seasonal Discount for each SubCategory**
+
+*Purpose*: Measure seasonal discount costs by Subcategory to control promotion budget
+
 ```sql
 select 
     FORMAT_TIMESTAMP("%Y", ModifiedDate)
@@ -192,6 +209,7 @@ from (
 )
 group by 1,2;
 ```
+*Result*
 | f0_ | Name | total_cost |
 | --- | --- | --- |
 | 2012 | Helmets | 14.971.669 |
@@ -199,6 +217,9 @@ group by 1,2;
 
 
 **QUERY 5 -- Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)**
+
+*Purpose*: Assess customer retention through monthly repurchase behavior (cohort analysis) to understand loyalty trends, improve retention strategies, and reduce churn
+
 ```sql
 with 
 info as (
@@ -246,6 +267,7 @@ from month_gap
 group by 1,2
 order by 1,2;
 ```
+*Result*
 | month_join | month_diff | customer_cnt |
 | --- | --- | --- |
 | 1 | M - 0 | 2076 |
@@ -280,6 +302,9 @@ order by 1,2;
 
 
 **QUERY 6 - Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal**
+
+*Purpose*: Track monthly stock fluctuations to prevent overstock or stockouts
+
 ```sql
 with 
 raw_data as (
@@ -307,6 +332,7 @@ from (
       )
 order by 1 asc, 2 desc;
 ```
+*Result*
 | Name | mth | yr | stock_qty | stock_prv | diff |
 | --- | --- | --- | --- | --- | --- |
 | BB Ball Bearing | 12 | 2011 | 8475 | 14544 | -41.7 |
@@ -1040,8 +1066,11 @@ order by 1 asc, 2 desc;
 | Top Tube | 6 | 2011 | 640 |  | 0 |
 
 
-**QUERY 7 - -"Calc Ratio of Stock / Sales in 2011 by product name, by month.Order results by month desc, ratio desc. Round Ratio to 1 decimal
+**QUERY 7 - -"Calculate Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal 
 mom yoy**
+
+*Purpose*: Analyze stock-to-sales ratio to identify inventory inefficiencies, detect slow-moving products, and optimize stock planning or clearance decisions
+
 ```sql
 with 
 sale_info as (
@@ -1080,6 +1109,7 @@ and sale_info.mth = stock_info.mth
 and sale_info.yr = stock_info.yr
 order by 1 desc, 7 desc;
 ```
+*Result*
 | mth | yr | ProductId | Name | sales | stock | ratio |
 | --- | --- | --- | --- | --- | --- | --- |
 | 12 | 2011 | 745 | HL Mountain Frame - Black, 48 | 1 | 27 | 27 |
@@ -1419,7 +1449,10 @@ order by 1 desc, 7 desc;
 
 
 
-**QUERY 8 - No of order and value at Pending status in 2014**
+**QUERY 8 - Number of orders and value at Pending status in 2014**
+
+*Purpose*: Monitor pending orders to uncover process bottlenecks, enhance fulfillment efficiency, and minimize revenue delays or customer dissatisfaction
+
 ```sql
 SELECT
       EXTRACT(YEAR FROM ModifiedDate) AS yr
@@ -1432,6 +1465,7 @@ WHERE Status = 1
 GROUP BY yr,Status
 ;
 ```
+*Result*
 | yr | Status | order_cnt | value |
 | --- | --- | --- | --- |
 | 2014 | 1 | 224 | 3,873,579.0123 |
