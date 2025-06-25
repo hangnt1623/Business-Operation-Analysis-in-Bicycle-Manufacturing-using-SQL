@@ -1,4 +1,4 @@
-# Bicycle-Manufacturer
+# SQL_Bicycle Manufacturing & Business Optimization
 Use SQL for exploring Bicycle Manufacturer Dataset
 ![image](https://github.com/user-attachments/assets/589db91a-6188-4d1f-899b-66255b1e3fca)
 
@@ -440,7 +440,7 @@ ORDER BY month_year, subcate.Name
   + **Align purchasing/production** with high-volume items and seasonal trends
 
 
-**QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest grow rate. Can use metric: quantity_item. Round results to 2 decimal**
+**QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest growth rate. Can use metric: quantity_item. Round results to 2 decimal**
 
 *Purpose*: Identify top 3 fastest-growing product categories to prioritize investment
 
