@@ -22,14 +22,18 @@ Adventure Works is a well-known company that manufactures and sells bicycles, pa
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
-This project is to analyze product, customer, region, and inventory performance across time to uncover growth opportunities, improve operational efficiency, and support data-driven decisions in sales, marketing, and supply chain planning.
+This project is to analyze **product**, **customer**, **region**, and **inventory performance** across time to uncover **growth opportunities**, improve **operational efficiency**, and support **data-driven decisions** in **sales**, **marketing**, and **supply chain planning**.
 
-The main business question this project aims to answer is: "How can Adventure Works optimize product sales, customer retention, regional performance, and inventory management to drive growth and improve operational efficiency?"
+The main business question this project aims to answer is:  
+**"How can Adventure Works optimize** **product sales**, **customer retention**, **regional performance**, and **inventory management** **to drive** **growth** **and improve** **operational efficiency**?"**
+
 
 
 ### 👤 Who is this project for?  
-This project is designed for Adventure Works’ business leaders and decision-makers, including sales managers, marketing teams, supply chain planners, and operations executives who need actionable insights to boost sales, improve customer loyalty, optimize inventory, and expand market presence effectively.
-
+- Sales Managers
+- Marketing Teams
+- Supply Chain Planners
+- Operations Executives
 ---
 
 ## 📂 Dataset Description & Data Structure  
@@ -48,12 +52,6 @@ This project use 6 tables from this dataset:
 - production.product
 - production.productsubcategory
 - production.workorder
-
-## ⚒️ Main Process
-
-1️⃣ Understand dataset 
-
-2️⃣ Explore specific dataset through some requirements
 
 ---
 
