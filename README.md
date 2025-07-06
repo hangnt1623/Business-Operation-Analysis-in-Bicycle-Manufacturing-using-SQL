@@ -57,7 +57,9 @@ This project use 6 tables from this dataset:
 
 ## 🔎 Exploring dataset & insights  
 
-**QUERY 1 - Calculate Quantity of items, Sales value & Order quantity by each Subcategory in L12M**
+<details>
+  <summary>📊 <strong>QUERY 1 - Calculate Quantity of items, Sales value & Order quantity by each Subcategory in L12M</strong></summary>
+****
 
 *Purpose*: Evaluate sales performance by Subcategory (volume, revenue, orders) over the last 12 months to identify best-selling product groups and guide inventory, marketing, and sales strategy
 
@@ -109,10 +111,11 @@ ORDER BY 2,1
   + Focus Q2 campaigns on top-selling bike categories to maximize returns during peak season.
   + Review and rationalize underperforming SKUs like Locks and Fenders to reduce deadstock risk.
   + Use subcategory performance trends to guide inventory allocation and prioritize marketing spend by season.
+</details>
 
-
-**QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest growth rate. Can use metric: quantity_item. Round results to 2 decimal**
-
+<details>
+  <summary>📊 <strong>QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest growth rate. Can use metric: quantity_item. Round results to 2 decimal</strong></summary>
+****
 *Purpose*: Identify top 3 fastest-growing product categories to prioritize investment
 
 ```sql
@@ -170,10 +173,12 @@ order by dk ;
   + Prioritize production and inventory for these categories
   + Focus marketing and promotions on them
   + Explore product expansion or innovation to sustain growth.
+</details>
 
-
-**QUERY 3 - Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number**
-
+<details>
+  <summary>📊 <strong>QUERY 3 - Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number</strong></summary>
+****
+    
 *Purpose*: Identify high-performing regions each year based on order volume to prioritize investment and market expansion in strong territories
 
 ```sql
@@ -231,8 +236,12 @@ where rank_sale in (1,2,3)
   + Prioritize investment and tailored marketing strategies in Territory 4 to maintain and grow its market leadership.
   + Explore growth opportunities in Territory 6 by addressing its fluctuating performance and strengthening customer engagement.
   + Monitor Territory 1 closely as a rising market; consider pilot programs or targeted campaigns to accelerate growth.
+</details>
 
-**QUERY 4 - Calculate Total Discount Cost belongs to Seasonal Discount for each SubCategory**
+<details>
+  <summary>📊 <strong>QUERY 4 - Calculate Total Discount Cost belongs to Seasonal Discount for each SubCategory</strong></summary>
+
+****
 
 *Purpose*: Measure seasonal discount costs by Subcategory to control promotion budget
 
@@ -266,8 +275,11 @@ group by 1,2;
   + Optimize discount levels to balance sales uplift with profitability for Helmets.
   + Align discount timing and scale with inventory turnover to avoid excess stock buildup.
   + Establish clear budget limits for seasonal discounts by SubCategory to prevent overspending.
+</details>
 
-**QUERY 5 -- Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)**
+<details>
+  <summary>📊 <strong>QUERY 5 - Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)</strong></summary>
+****
 
 *Purpose*: Assess customer retention through monthly repurchase behavior (cohort analysis) to understand loyalty trends, improve retention strategies, and reduce churn
 
@@ -359,8 +371,12 @@ order by 1,2;
   + Develop targeted engagement campaigns within the first 1–3 months post-purchase to boost early repurchase rates.
   + Analyze and replicate factors driving the month-3 repurchase spike to enhance longer-term retention.
   + Introduce loyalty programs or incentives aimed at sustaining repeat purchases beyond the initial 3 months.
+</details>
 
-**QUERY 6 - Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal**
+
+<details>
+  <summary>📊 <strong>QUERY 6 - Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal</strong></summary>
+****
 
 *Purpose*: Track monthly stock fluctuations to prevent overstock or stockouts
 
@@ -426,10 +442,11 @@ order by 1 asc, 2 desc;
   + Require Demand Validation for Bulk Stock-Ins
     ++ Ensure all large POs are linked to: Forecast data, Sales campaigns, Confirmed customer orders
   + Add pre-check in PO approval workflow.
+</details>
 
-
-**QUERY 7 - -"Calculate Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal 
-mom yoy**
+<details>
+  <summary>📊 <strong>QUERY 7 -Calculate Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal</strong></summary>
+****
 
 *Purpose*: Analyze stock-to-sales ratio to identify inventory inefficiencies, detect slow-moving products, and optimize stock planning or clearance decisions
 
@@ -521,9 +538,11 @@ order by 1 desc, 7 desc;
   + Implement Monthly SKU-Level Inventory Reviews: Regularly monitor stock-to-sales ratios for each variant to quickly identify persistent overstock or stockout issues and adjust replenishment plans accordingly.
   + Set Automated Alerts for Extreme Ratio Patterns: Create threshold-based alerts (e.g., ratio >20 for overstock, <0.5 for stockout risk) sustained over multiple months to prompt timely interventions such as promotions or expedited orders.
   + Align Procurement with Rolling Sales Data: Use a rolling 3-month sales average to dynamically guide purchasing decisions, ensuring supply closely matches evolving demand patterns and reducing inventory imbalances.
+</details>
 
-
-**QUERY 8 - Number of orders and value at Pending status in 2014**
+<details>
+  <summary>📊 <strong>QUERY 8 - Number of orders and value at Pending status in 2014</strong></summary>
+****
 
 *Purpose*: Monitor pending orders to uncover process bottlenecks, enhance fulfillment efficiency, and minimize revenue delays or customer dissatisfaction
 
@@ -551,6 +570,7 @@ GROUP BY year,Status
   + Streamline order processing workflows to reduce pending durations
   + Monitor pending order metrics regularly to prevent backlog buildup
   + Prioritize clearance of high-value pending orders to improve cash flow and customer satisfaction
+</details>
 
 ### 💡Conclusion: Key Insights & Recommendations
 
