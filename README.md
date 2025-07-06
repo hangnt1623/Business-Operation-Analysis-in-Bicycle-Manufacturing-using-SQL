@@ -555,48 +555,48 @@ GROUP BY year,Status
 ### 💡Conclusion: Key Insights & Recommendations
 
 #### Awareness & Interest  
-**Insights:**  
+***Insights:***
 - Bikes (Road, Touring, Mountain) dominate sales and orders in Q2.  
 - Accessories like Locks and Fenders show weak demand and low sales.  
 
-**Recommendations:**  
+***Recommendations:***
 - Focus marketing campaigns on top bike categories during peak season.  
 - Review and rationalize underperforming accessory SKUs to reduce deadstock.
 
 #### Consideration  
-**Insights:**  
+***Insights:***
 - Mountain Frames, Socks, and Road Frames have the highest YoY growth (>4x).  
 
-**Recommendations:**  
+***Recommendations:***
 - Prioritize production, inventory, and promotions for these fast-growing categories.  
 - Explore product expansion or innovation to sustain growth momentum.
 
 #### Conversion  
-**Insights:**  
+***Insights:***
 - Territory 4 leads consistently in order volume; Territories 6 and 1 show growth potential.  
 - Seasonal discount costs for Helmets increased significantly.  
 - Pending orders in 2014 represent significant volume and value, risking delayed fulfillment.
 
-**Recommendations:**  
+***Recommendations:***
 - Invest in tailored marketing for Territory 4; strengthen engagement in Territories 6 and 1.  
 - Optimize discount levels and align with inventory turnover for profitability.  
 - Streamline order processing to reduce pending backlog and improve cash flow.
 
 #### Operational Efficiency  
-**Insights:**  
+***Insights:***
 - Volatile stock levels on critical SKUs like BB Ball Bearing indicate unstable replenishment.  
 - Persistent overstocking of slow-moving SKUs and low stock on high-demand items.
 
-**Recommendations:**  
+***Recommendations:***
 - Monitor SKU stock fluctuations; trigger alerts for spikes and drops.  
 - Align procurement with rolling sales data to balance inventory.  
 - Require demand validation for large stock purchases.
 
 #### Retention  
-**Insights:**  
+***Insights:***
 - Sharp drop in customer retention after the first month; slight repurchase spikes at month 3.
 
-**Recommendations:**  
+***Recommendations:***
 - Launch targeted engagement campaigns within 1-3 months post-purchase.  
 - Introduce loyalty programs and incentives to sustain repeat purchases.
 
