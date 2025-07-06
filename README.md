@@ -1,4 +1,5 @@
-# SQL_Bicycle Manufacturing & Business Optimization
+# Business Operation Analysis in Bicycle Manufacturing using SQL
+
 Use SQL for exploring Bicycle Manufacturer Dataset
 ![image](https://github.com/user-attachments/assets/589db91a-6188-4d1f-899b-66255b1e3fca)
 
