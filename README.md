@@ -22,10 +22,10 @@ Adventure Works is a well-known company that manufactures and sells bicycles, pa
 ### Objective:
 ### 📖 What is this project about? What Business Question will it solve?
 
-This project is to analyze **product**, **customer**, **region**, and **inventory performance** across time to uncover **growth opportunities**, improve **operational efficiency**, and support **data-driven decisions** in **sales**, **marketing**, and **supply chain planning**.
+This project is to analyze product, customer, region, and **inventory performance** across time to uncover **growth opportunities**, improve **operational efficiency**, and support data-driven decisions in sales, marketing, and supply chain planning.
 
 The main business question this project aims to answer is:  
-**"How can Adventure Works optimize** **product sales**, **customer retention**, **regional performance**, and **inventory management** **to drive** **growth** **and improve** **operational efficiency**?"**
+**"❓️How can Adventure Works optimize** **product sales**, **customer retention**, **regional performance**, and **inventory management** **to drive** **growth** **and improve** **operational efficiency**?"**
 
 
 
