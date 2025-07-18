@@ -4,9 +4,9 @@ Use SQL for exploring Bicycle Manufacturer Dataset
 ![image](https://github.com/user-attachments/assets/589db91a-6188-4d1f-899b-66255b1e3fca)
 
 
-- Author: Nguyen Thuy Hang
-- Date: 2025-06-22
-- Tools Used: SQL  
+- **Author**: Nguyen Thuy Hang
+- **Date**: 2025-06-22
+- **Tools Used**: SQL  
 
 # 📑 Table of Contents  
 1. [📌 Background & Overview](#-background--overview)  
@@ -30,10 +30,15 @@ The main business question this project aims to answer is:
 
 
 ### 👤 Who is this project for?  
-- Sales Managers
-- Marketing Teams
-- Supply Chain Planners
-- Operations Executives
+
+✔️ Sales Managers
+
+✔️ Marketing Teams
+
+✔️ Supply Chain Planners
+
+✔️ Operations Executives
+
 ---
 
 ## 📂 Dataset Description & Data Structure  
@@ -58,7 +63,7 @@ This project use 6 tables from this dataset:
 ## 🔎 Exploring dataset & insights  
 
 <details>
-  <summary>📊 <strong>QUERY 1 - Calculate Quantity of items, Sales value & Order quantity by each Subcategory in L12M</strong></summary>
+  <summary>🔎 <strong>QUERY 1 - Calculate Quantity of items, Sales value & Order quantity by each Subcategory in L12M</strong></summary>
 ****
 
 *Purpose*: Evaluate sales performance by Subcategory (volume, revenue, orders) over the last 12 months to identify best-selling product groups and guide inventory, marketing, and sales strategy
@@ -114,7 +119,7 @@ ORDER BY 2,1
 </details>
 
 <details>
-  <summary>📊 <strong>QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest growth rate. Can use metric: quantity_item. Round results to 2 decimal</strong></summary>
+  <summary>🔎 <strong>QUERY 2 - Calculate % YoY growth rate by SubCategory & release top 3 cat with highest growth rate. Can use metric: quantity_item. Round results to 2 decimal</strong></summary>
 ****
 *Purpose*: Identify top 3 fastest-growing product categories to prioritize investment
 
@@ -176,7 +181,7 @@ order by dk ;
 </details>
 
 <details>
-  <summary>📊 <strong>QUERY 3 - Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number</strong></summary>
+  <summary>🔎 <strong>QUERY 3 - Ranking Top 3 TeritoryID with biggest Order quantity of every year. If there's TerritoryID with same quantity in a year, do not skip the rank number</strong></summary>
 ****
     
 *Purpose*: Identify high-performing regions each year based on order volume to prioritize investment and market expansion in strong territories
@@ -239,7 +244,7 @@ where rank_sale in (1,2,3)
 </details>
 
 <details>
-  <summary>📊 <strong>QUERY 4 - Calculate Total Discount Cost belongs to Seasonal Discount for each SubCategory</strong></summary>
+  <summary>🔎 <strong>QUERY 4 - Calculate Total Discount Cost belongs to Seasonal Discount for each SubCategory</strong></summary>
 
 ****
 
@@ -278,7 +283,7 @@ group by 1,2;
 </details>
 
 <details>
-  <summary>📊 <strong>QUERY 5 - Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)</strong></summary>
+  <summary>🔎 <strong>QUERY 5 - Retention rate of Customer in 2014 with status of Successfully Shipped (Cohort Analysis)</strong></summary>
 ****
 
 *Purpose*: Assess customer retention through monthly repurchase behavior (cohort analysis) to understand loyalty trends, improve retention strategies, and reduce churn
@@ -375,7 +380,7 @@ order by 1,2;
 
 
 <details>
-  <summary>📊 <strong>QUERY 6 - Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal</strong></summary>
+  <summary>🔎 <strong>QUERY 6 - Trend of Stock level & MoM diff % by all product in 2011. If %gr rate is null then 0. Round to 1 decimal</strong></summary>
 ****
 
 *Purpose*: Track monthly stock fluctuations to prevent overstock or stockouts
@@ -445,7 +450,7 @@ order by 1 asc, 2 desc;
 </details>
 
 <details>
-  <summary>📊 <strong>QUERY 7 -Calculate Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal</strong></summary>
+  <summary>🔎 <strong>QUERY 7 -Calculate Ratio of Stock / Sales in 2011 by product name, by month. Order results by month desc, ratio desc. Round Ratio to 1 decimal</strong></summary>
 ****
 
 *Purpose*: Analyze stock-to-sales ratio to identify inventory inefficiencies, detect slow-moving products, and optimize stock planning or clearance decisions
@@ -541,7 +546,7 @@ order by 1 desc, 7 desc;
 </details>
 
 <details>
-  <summary>📊 <strong>QUERY 8 - Number of orders and value at Pending status in 2014</strong></summary>
+  <summary>🔎 <strong>QUERY 8 - Number of orders and value at Pending status in 2014</strong></summary>
 ****
 
 *Purpose*: Monitor pending orders to uncover process bottlenecks, enhance fulfillment efficiency, and minimize revenue delays or customer dissatisfaction
@@ -574,7 +579,7 @@ GROUP BY year,Status
 
 ### 💡Conclusion: Key Insights & Recommendations
 
-#### Awareness & Interest  
+#### 💫 Awareness & Interest  
 ***Insights:***
 - Bikes (Road, Touring, Mountain) dominate sales and orders in Q2.  
 - Accessories like Locks and Fenders show weak demand and low sales.  
@@ -583,7 +588,7 @@ GROUP BY year,Status
 - Focus marketing campaigns on top bike categories during peak season.  
 - Review and rationalize underperforming accessory SKUs to reduce deadstock.
 
-#### Consideration  
+#### 💫 Consideration  
 ***Insights:***
 - Mountain Frames, Socks, and Road Frames have the highest YoY growth (>4x).  
 
@@ -591,7 +596,7 @@ GROUP BY year,Status
 - Prioritize production, inventory, and promotions for these fast-growing categories.  
 - Explore product expansion or innovation to sustain growth momentum.
 
-#### Conversion  
+#### 💫 Conversion  
 ***Insights:***
 - Territory 4 leads consistently in order volume; Territories 6 and 1 show growth potential.  
 - Seasonal discount costs for Helmets increased significantly.  
@@ -602,7 +607,7 @@ GROUP BY year,Status
 - Optimize discount levels and align with inventory turnover for profitability.  
 - Streamline order processing to reduce pending backlog and improve cash flow.
 
-#### Operational Efficiency  
+#### 💫 Operational Efficiency  
 ***Insights:***
 - Volatile stock levels on critical SKUs like BB Ball Bearing indicate unstable replenishment.  
 - Persistent overstocking of slow-moving SKUs and low stock on high-demand items.
@@ -612,7 +617,7 @@ GROUP BY year,Status
 - Align procurement with rolling sales data to balance inventory.  
 - Require demand validation for large stock purchases.
 
-#### Retention  
+#### 💫 Retention  
 ***Insights:***
 - Sharp drop in customer retention after the first month; slight repurchase spikes at month 3.
 
